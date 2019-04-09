@@ -1,0 +1,1 @@
+HiScoreLib is a library that handles hiscores in your games
