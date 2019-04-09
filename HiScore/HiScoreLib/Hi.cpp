@@ -35,16 +35,17 @@ void Hi::showScore()
 	for (int i = 0; i < SIZE; i++)
 	{
 		if(lis[i].name !="")
-		cout << "Character:" << lis[i].name.c_str() << "   " << "score:" << lis[i].score << endl;
+		cout << "Character:" << lis[i].name.c_str() << "	score:" << lis[i].score << endl;
 	}
 }
 void Hi::showHScore()
 {
-	cout << hScore<< endl;
+	cout << "HiScore:" << endl;
+	cout <<"Character:" << lis[hScore].name.c_str() << "	Score:"<<lis[hScore].score << endl;
 }
 int Hi::getHScore()
 {
-	return hScore;
+	return lis[hScore].score;
 }
 void Hi::updateHScore()
 {
@@ -52,7 +53,7 @@ void Hi::updateHScore()
 	{
 		if (lis[i].score > hScore) {
 			if (lis[i].name != "")
-			hScore = lis[i].score;
+			hScore = i;
 		}
 	}
 }
